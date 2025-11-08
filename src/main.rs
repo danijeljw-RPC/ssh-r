@@ -35,7 +35,7 @@ fn main() -> Result<()> {
         Some(Command::Export { alias }) => {
             let c = cfg::load_or_init()?;
             let h = cfg::find_host(&c, &alias)?;
-            let cmd = sshc::export_command(&h, &[]);
+            let cmd = sshr::export_command(&h, &[]);
             println!("{cmd}");
         }
         Some(Command::Remove { alias }) => {
@@ -69,7 +69,7 @@ fn main() -> Result<()> {
         Some(Command::Connect { alias, ssh_args }) => {
             let c = cfg::load_or_init()?;
             let h = cfg::find_host(&c, &alias)?;
-            let code = sshc::connect(&h, &ssh_args)?;
+            let code = sshr::connect(&h, &ssh_args)?;
             std::process::exit(code);
         }
         Some(Command::CheckUpdates) => {
