@@ -1,7 +1,7 @@
 use clap::{Parser, Subcommand, Args, ValueEnum};
 
 #[derive(Parser, Debug)]
-#[command(name="ssh-r", version, about="Alias-based SSH launcher")]
+#[command(name="ssh-r", version, about="SSH-r(ust) Management Tool")]
 pub struct Cli {
     /// Increase verbosity
     #[arg(short, long)]
