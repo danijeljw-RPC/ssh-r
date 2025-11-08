@@ -1,7 +1,7 @@
 mod cli;
 mod model;
 mod config;
-mod sshc;
+mod sshr;
 mod update;
 
 use anyhow::Result;
